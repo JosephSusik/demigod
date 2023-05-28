@@ -1,0 +1,48 @@
+.item-show-item {
+    width: 70%;
+    aspect-ratio: 3 / 4;
+    transition: all .2s ease-in-out;
+
+    border-radius: 6px;
+
+    position: relative;
+}
+
+.item-show-item:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: ease-out 0.5s;
+
+    background-color: beige;
+}
+
+body:has(.item-show-item:hover) 
+.item-show-item:not(:hover) {
+    transform: scale(0.8);
+    transition: ease-out 0.5s;
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(2px); 
+
+    background-color: red;
+}
+
+.item-show-item:before,
+.item-show-item:after {
+    position:absolute; 
+    content:' ';
+    
+    width:30%; 
+    height: 30%;
+
+    border-color:black; 
+    border-style:solid; 
+    transition: all .3s ease-in-out;
+}
+
+.item-show-item:before {bottom:0;right:0;border-width: 0 1px 1px 0; border-bottom-right-radius: 6px;}
+.item-show-item:after {top:0;left:0;border-width: 1px 0 0 1px; border-top-left-radius: 6px;}
+
+.item-show-item:hover::before,  
+.item-show-item:hover::after{ 
+    width:50%; 
+    height: 50%;
+}

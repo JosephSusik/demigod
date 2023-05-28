@@ -1,0 +1,36 @@
+nav {
+    height: var(--nav-height);
+    display: flex;
+
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-right);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+
+    width: max-content;
+
+    gap: 32px;
+}
+
+nav a {
+    width: max-content;
+}
+
+nav .cart-btn {
+    width: max-content;
+
+    justify-self: end;
+}
+
+nav .logo {
+    width: max-content;
+
+    justify-self: start;
+}
