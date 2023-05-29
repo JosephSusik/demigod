@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 import './styles/Navbar.css'
 
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Switch from '@mui/material/Switch';
+import Badge from "@mui/material/Badge";
+
+
 function Navbar() {
     return(
         <nav>
@@ -13,8 +19,11 @@ function Navbar() {
                 <li>Contact</li>
             </ul>
             <div className='cart-btn'>
-                <a href="#">profile</a>
-                <a href="#">cart</a>
+                <Switch />
+                <AccountCircleIcon className='icon'/>
+                <Badge badgeContent={1} overlap="rectangular">
+                    <ShoppingCartIcon className='icon'/>{" "}
+                </Badge>
             </div>
         </nav>
     );
