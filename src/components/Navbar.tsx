@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom';
 import './styles/Navbar.css'
 
 function Navbar() {
     return(
         <nav>
             <div className='logo'>
-                <a href='#'>logo</a>
+                <Link to={"/"}><a href='#'>logo</a></Link>
             </div>
             <ul>
                 <li>About us</li>
-                <li>Products</li>
+                <Link to={"/all"}><li>Products</li></Link>
                 <li>Contact</li>
             </ul>
             <div className='cart-btn'>

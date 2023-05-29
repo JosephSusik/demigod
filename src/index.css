@@ -3,8 +3,12 @@
   margin: 0;
   font-family: 'Roboto', sans-serif;
 
-  outline: 1px dotted red;
+  overscroll-behavior: none;
 
+  outline: 1px dotted red;
+}
+
+:root {
   --nav-height: 68px;
   --padding-left: 16vw;
   --padding-right: 16vw;
