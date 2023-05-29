@@ -10,7 +10,6 @@ function Homepage() {
             <div className="items">
                 <ItemShow text='Mikiny' link='/all'/>
                 <ItemShow text='Trička' link='/all'/>
-                <ItemShow text='Vše' link='/all'/>
             </div>
         </section>
     );
