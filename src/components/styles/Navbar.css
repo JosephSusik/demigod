@@ -58,7 +58,7 @@ nav .icon {
     position: relative;
     border-radius: 2px;
     cursor: pointer;
-    border: 1.5px solid black;
+    border: 1.8px solid black;
    }
    
    input[type=checkbox]::before {
