@@ -54,11 +54,11 @@ nav .icon {
     appearance: none;
     height: 20px;
     width: 40px;
-    background-color: #fff;
+    background-color: transparent;
     position: relative;
     border-radius: 2px;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1.5px solid black;
    }
    
    input[type=checkbox]::before {

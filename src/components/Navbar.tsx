@@ -3,9 +3,9 @@ import './styles/Navbar.css'
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
-
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Badge from "@mui/material/Badge";
-
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 function Navbar() {
     return(
@@ -22,9 +22,9 @@ function Navbar() {
                 <label className="switch">
                     <input type="checkbox" />
                 </label>
-                <PersonIcon className='icon'/>
+                <PersonOutlineOutlinedIcon className='icon' />
                 <Badge badgeContent={1} overlap="rectangular">
-                    <ShoppingCartIcon className='icon'/>{" "}
+                    <ShoppingCartOutlinedIcon className='icon'/>{" "}
                 </Badge>
             </div>
         </nav>
