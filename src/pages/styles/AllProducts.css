@@ -4,3 +4,8 @@
     padding-left: var(--padding-left);
     padding-right: var(--padding-right);
 }
+
+.all-products .filters {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
