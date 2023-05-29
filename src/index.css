@@ -6,7 +6,7 @@
   overscroll-behavior: none;
   user-select: none;
 
-  outline: 1px dotted red;
+  --outline: 1px dotted red;
 }
 
 :root {

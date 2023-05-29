@@ -26,7 +26,7 @@ body:has(.item-show-item:hover)
 
     background-color: red;
 }
-
+/*
 .item-show-item:before,
 .item-show-item:after {
     position:absolute; 
@@ -50,7 +50,7 @@ body:has(.item-show-item:hover)
     width:50%; 
     height: 50%;
 }
-
+*/
 .item-show-item .text {
     position: absolute;
     
@@ -74,6 +74,31 @@ body:has(.item-show-item:hover)
 
     z-index: 102;
 }
+
+.item-show-item a:before,
+.item-show-item a:after {
+    position:absolute; 
+    content:' ';
+    
+    width:30%; 
+    height: 30%;
+
+    border-color:black; 
+    border-style:solid; 
+    transition: all .3s ease-in-out;
+
+    z-index: 101;
+}
+
+.item-show-item a:before {bottom:0;right:0;border-width: 0 1px 1px 0; border-bottom-right-radius: 6px;}
+.item-show-item a:after {top:0;left:0;border-width: 1px 0 0 1px; border-top-left-radius: 6px;}
+
+.item-show-item a:hover::before,  
+.item-show-item a:hover::after{ 
+    width:50%; 
+    height: 50%;
+}
+
 
 .item-show-item img {
     position: absolute;
