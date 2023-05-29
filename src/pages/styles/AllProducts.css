@@ -1,0 +1,6 @@
+.all-products {
+    min-height: calc(100vh - var(--nav-height));
+    
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-right);
+}

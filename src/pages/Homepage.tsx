@@ -8,9 +8,9 @@ function Homepage() {
                 <p>HEADER</p>
             </div>
             <div className="items">
-                <ItemShow />
-                <ItemShow />
-                <ItemShow />
+                <ItemShow text='Mikiny' link='/all'/>
+                <ItemShow text='Trička' link='/all'/>
+                <ItemShow text='Vše' link='/all'/>
             </div>
         </section>
     );

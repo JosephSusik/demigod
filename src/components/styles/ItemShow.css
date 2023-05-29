@@ -46,3 +46,27 @@ body:has(.item-show-item:hover)
     width:50%; 
     height: 50%;
 }
+
+.item-show-item .text {
+    position: absolute;
+    
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+}
+
+.item-show-item a {
+    position: absolute;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+}

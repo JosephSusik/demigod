@@ -13,6 +13,7 @@ function Navbar() {
                 <li>Contact</li>
             </ul>
             <div className='cart-btn'>
+                <a href="#">profile</a>
                 <a href="#">cart</a>
             </div>
         </nav>

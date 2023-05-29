@@ -2,9 +2,13 @@ import './styles/AllProducts.css'
 
 function AllProducts() {
     return(
-        <div>
+        <section className='all-products'>
+            <div className='filters'>
+                FILTERS
+            </div>
             <h1>ALL PRODUCTS</h1>
-        </div>
+
+        </section>
     )
 }
 

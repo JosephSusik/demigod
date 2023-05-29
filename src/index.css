@@ -4,6 +4,7 @@
   font-family: 'Roboto', sans-serif;
 
   overscroll-behavior: none;
+  user-select: none;
 
   outline: 1px dotted red;
 }
