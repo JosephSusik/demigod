@@ -13,6 +13,11 @@
 
 section {
   background: var(--background);
+
+  min-height: calc(100vh - var(--nav-height));
+    
+  padding-left: var(--padding-left);
+  padding-right: var(--padding-right);
 }
 
 :root {

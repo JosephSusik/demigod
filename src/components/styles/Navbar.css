@@ -25,6 +25,23 @@ nav a {
     width: max-content;
     text-decoration: none;
     color: var(--color);
+
+    height: max-content;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    --margin: auto;
+    height: 0px;
+    width: 0px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--color);
+    transition: width .5s ease, background-color .5s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 nav .cart-btn {
@@ -38,9 +55,28 @@ nav .cart-btn {
 }
 
 nav .logo {
-    width: max-content;
-
+    display: flex;
     justify-self: start;
+    height: 100%;
+    width: 100%;
+}
+
+nav .logo a {
+    height: 100%;
+    width: 80%;
+}
+
+nav .logo a::after {
+    all:unset;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    filter: var(--filter);
+    -webkit-filter: var(--filter)
 }
 
 nav .icon {

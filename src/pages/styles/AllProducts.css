@@ -1,11 +1,11 @@
-.all-products {
-    min-height: calc(100vh - var(--nav-height));
-    
-    padding-left: var(--padding-left);
-    padding-right: var(--padding-right);
-}
+.all-products .show-products {
+    display: flex;
+    flex-wrap: wrap;
 
-.all-products .filters {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    justify-content: space-between;
+
+    row-gap: 32px;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
 }

@@ -8,7 +8,7 @@
     --black-600: #515151;
     --black-700: #434343;
     --black-800: #383838;
-    --black-900: #313131;
+    --black-900: #313130;
     --black-950: #000000; 
 
     --dark: var(--black-900);
@@ -31,6 +31,8 @@ body {
     --div-backround: var(--black-700);
 
     --emph: #5E5BE1;
+
+    --filter: none;
 }
   
 /*Light mode*/
@@ -43,4 +45,6 @@ body {
     --div-backround: var(--black-200);
 
     --emph: rgba(173,0,255,1);
+
+    --filter: invert(100%);
 }

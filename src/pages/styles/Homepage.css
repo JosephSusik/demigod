@@ -15,9 +15,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-
-    padding-left: var(--padding-left);
-    padding-right: var(--padding-right);
 }
 
 .homepage .items .item-show-item:first-child {
@@ -32,9 +29,6 @@
     
     display: flex;
     align-items: center;
-
-    padding-left: var(--padding-left);
-    padding-right: var(--padding-right);
 }
 
 @media screen and (max-width: 767px) {

@@ -1,12 +1,22 @@
+import Filters from '../components/Filters';
+import ProductPreview from '../components/ProductPreview';
 import './styles/AllProducts.css'
 
 function AllProducts() {
     return(
         <section className='all-products'>
-            <div className='filters'>
-                FILTERS
+            <Filters />
+            <div className='show-products'>
+                <ProductPreview />
+                <ProductPreview />
+                <ProductPreview />
+                <ProductPreview />
+                <ProductPreview />
+                <ProductPreview />
+                <ProductPreview />
+                <ProductPreview />
+                <ProductPreview />
             </div>
-            <h1>ALL PRODUCTS</h1>
         </section>
     )
 }

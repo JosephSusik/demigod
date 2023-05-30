@@ -6,16 +6,19 @@ import Badge from "@mui/material/Badge";
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import DarkModeSwitch from './DarkModeSwitch';
 
+import img from '../img/demigod-icon.png'
+
+
 function Navbar() {
     return(
         <nav>
             <div className='logo'>
-                <Link to={"/"}>logo</Link>
+                <Link to={"/"}><img src={img} alt="" /></Link>
             </div>
             <ul>
-                <li>About us</li>
+                <Link to={"/about"}><li>About us</li></Link>
                 <Link to={"/all"}><li>Products</li></Link>
-                <li>Contact</li>
+                <Link to={"/contact"}><li>Contact</li></Link>
             </ul>
             <div className='cart-btn'>
                 <DarkModeSwitch />
