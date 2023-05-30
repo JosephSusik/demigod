@@ -5,7 +5,7 @@ function Homepage() {
     return(
         <section className="homepage">
             <div className='header'>
-                <p>HEADER tož kura konečně dobrá značka</p>
+                <p>carousel</p>
             </div>
             <div className="items">
                 <ItemShow text='Mikiny' link='/products'/>
