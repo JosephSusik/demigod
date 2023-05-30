@@ -12,11 +12,12 @@ function DarkModeSwitch() {
 
     return(
         <ThemeContext.Consumer>
-             {({ changeTheme }) => (
+             {({ changeTheme, themes }) => (
             <div className="dark-mode-switch">
                 <label className="switch">
-                    <input type="checkbox" 
-                        onChange={event =>handleChange(event, changeTheme)}                        
+                    <input type="checkbox"
+                        onChange={event =>handleChange(event, changeTheme)}  
+                        defaultChecked={themes === "dark-theme"? true:false}      
                     />
                 </label>
             </div>
