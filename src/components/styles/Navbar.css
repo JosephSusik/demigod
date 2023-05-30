@@ -32,31 +32,18 @@ nav a {
 nav a::after {
     content: '';
     display: block;
-    margin-left: auto;
+    margin: auto;
     height: 0px;
     width: 0px;
     padding-bottom: 2px;
     border-bottom: 1px solid var(--color);
     transition: width .5s ease, background-color .5s ease;
 }
-nav a::before {
-content: '';
-    display: block;
-    --margin: auto;
-    height: 0px;
-    width: 0px;
-    padding-bottom: 2px;
-    border-top: 1px solid var(--color);
-    transition: width .5s ease, background-color .5s ease;
-}
 
 nav a:hover::after {
-    width: 50%;
+    width: 100%;
 }
 
-nav a:hover::before {
-    width: 50%;
-}
 
 nav .cart-btn {
     width: max-content;

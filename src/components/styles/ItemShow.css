@@ -1,5 +1,9 @@
 .item-show-item {
+/*    
     width: 88%;
+*/    
+    width: 76%;
+
     aspect-ratio: 4 / 3;
     transition: all .2s ease-in-out;
 

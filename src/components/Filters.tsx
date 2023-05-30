@@ -3,9 +3,8 @@ import './styles/Filters.css'
 function Filters() {
     return(
         <div className='filters'>
-            <p>Filtry</p>
-            <p>Tričko/mikina</p>
-            <p>Cena</p>
+            <p>Trička | Mikiny | Vše</p>
+            <p>Nejdražší | Nejlevnější | Abecedně</p>
         </div>
     );
 }
