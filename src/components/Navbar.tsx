@@ -17,7 +17,7 @@ function Navbar() {
             </div>
             <ul>
                 <Link to={"/about"}><li>About us</li></Link>
-                <Link to={"/all"}><li>Products</li></Link>
+                <Link to={"/products"}><li>Products</li></Link>
                 <Link to={"/contact"}><li>Contact</li></Link>
             </ul>
             <div className='cart-btn'>

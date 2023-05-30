@@ -8,8 +8,8 @@ function Homepage() {
                 <p>HEADER tož kura konečně dobrá značka</p>
             </div>
             <div className="items">
-                <ItemShow text='Mikiny' link='/all'/>
-                <ItemShow text='Trička' link='/all'/>
+                <ItemShow text='Mikiny' link='/products'/>
+                <ItemShow text='Trička' link='/products'/>
             </div>
         </section>
     );
