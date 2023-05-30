@@ -22,8 +22,6 @@
     cursor: pointer;
     transform: scale(1.15);
     transition: ease-out 0.5s;
-
-    background-color: beige;
 }
 
 body:has(.item-show-item:hover) 
@@ -31,8 +29,6 @@ body:has(.item-show-item:hover)
     transform: scale(0.8);
     transition: ease-out 0.5s;
     filter: brightness(0.5) saturate(0) contrast(1.2) blur(2px); 
-
-    background-color: red;
 }
 
 .item-show-item .text {
@@ -67,7 +63,7 @@ body:has(.item-show-item:hover)
     width:30%; 
     height: 30%;
 
-    border-color:black; 
+    border-color:var(--color); 
     border-style:solid; 
     transition: all .3s ease-in-out;
 }

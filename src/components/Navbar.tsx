@@ -1,17 +1,16 @@
 import { Link } from 'react-router-dom';
 import './styles/Navbar.css'
 
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Badge from "@mui/material/Badge";
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import DarkModeSwitch from './DarkModeSwitch';
 
 function Navbar() {
     return(
         <nav>
             <div className='logo'>
-                <Link to={"/"}><a href='#'>logo</a></Link>
+                <Link to={"/"}>logo</Link>
             </div>
             <ul>
                 <li>About us</li>
@@ -19,9 +18,7 @@ function Navbar() {
                 <li>Contact</li>
             </ul>
             <div className='cart-btn'>
-                <label className="switch">
-                    <input type="checkbox" />
-                </label>
+                <DarkModeSwitch />
                 <PersonOutlineOutlinedIcon className='icon' />
                 <Badge badgeContent={1} overlap="rectangular">
                     <ShoppingCartOutlinedIcon className='icon'/>{" "}
