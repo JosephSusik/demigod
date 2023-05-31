@@ -1,6 +1,42 @@
 .filters {
-    padding-top: 8px;
+    padding-top: 16px;
 
     display: flex;
     justify-content: space-between;
 }
+
+.filters .filter {
+    display: flex;
+    gap: 4px;
+}
+
+.filters .filter button {
+    all: unset;
+    color: var(--emph-not-active);
+    transition: all .1s linear;
+}
+
+.filters .filter button:hover {
+    cursor: pointer;
+    color: var(--color);
+}
+
+.filters .filter button::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 0px;
+    width: 0px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--color);
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.filters .filter button.active {
+    color: var(--color);
+}
+
+.filters .filter .active::after {
+    width: 100%;
+}
+

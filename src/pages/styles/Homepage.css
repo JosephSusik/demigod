@@ -1,5 +1,5 @@
 .homepage {
-    min-height: calc(100vh - var(--nav-height) - 8px);
+    min-height: calc(100vh - var(--nav-height) - 16px);
 
     display: flex;
     
@@ -10,7 +10,7 @@
 
     padding: 0px;
 
-    padding-top: 8px;
+    padding-top: 16px;
 }
 
 .homepage .items {
@@ -31,15 +31,11 @@
     justify-self: end;
 }
 */
-.homepage .header {
+.homepage .header {    
     height: 100%;
-    
-    display: flex;
-    align-items: center;
 
-    border-top: 1px solid var(--color);
-    border-bottom: 1px solid var(--color);
-
+    border-top: 2px solid var(--color);
+    border-bottom: 2px solid var(--color);
 }
 
 @media screen and (max-width: 767px) {

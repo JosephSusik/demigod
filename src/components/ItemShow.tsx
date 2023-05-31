@@ -8,7 +8,9 @@ function ItemShow({text, link}:{text:string, link:string}) {
             <div className='item-show-item'>
                 <Link to={link}>
                     <img src={img} alt="" />
-                    <p className='text'>{text}</p>
+                    <div className='text'>
+                        <p>{text}</p>    
+                    </div>
                 </Link>
             </div>
     );

@@ -7,15 +7,11 @@ function AllProducts() {
         <section className='all-products'>
             <Filters />
             <div className='show-products'>
-                <ProductPreview />
-                <ProductPreview />
-                <ProductPreview />
-                <ProductPreview />
-                <ProductPreview />
-                <ProductPreview />
-                <ProductPreview />
-                <ProductPreview />
-                <ProductPreview />
+                <ProductPreview name='Name' price={12}/>
+                <ProductPreview name='Future Wasted - Tričko' price={549}/>
+                <ProductPreview name='Manipulate - Tričko' price={549}/>
+                <ProductPreview name='Demigod - Tričko' price={549}/>
+                <ProductPreview name='Timecatcher - Tričko' price={549}/>
             </div>
         </section>
     )

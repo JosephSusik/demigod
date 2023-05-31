@@ -44,6 +44,10 @@ nav a:hover::after {
     width: 100%;
 }
 
+nav a.active::after {
+    width: 100%;
+}
+
 
 nav .cart-btn {
     width: max-content;
@@ -86,4 +90,30 @@ nav .icon {
     
     stroke: var(--color);
     stroke-width: 0;
+}
+
+nav .icon-wrapper {
+    width: min-content;
+    height: 24px;
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+
+    width: 128px;
+
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 34px;
+
+    background: var(--background);
+    border: 2px solid var(--color);
+    border-radius: var(--border-radius);
 }

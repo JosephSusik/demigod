@@ -21,7 +21,12 @@ section {
 }
 
 :root {
+/*  
   --nav-height: 68px;
+*/ 
+  --nav-height: 76px;
+
+  --border-radius: 2px;
 
   --padding-left: 10vw;
   --padding-right: 10vw;
@@ -29,4 +34,16 @@ section {
   --padding-left: 16vw;
   --padding-right: 16vw;
 */
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
