@@ -53,6 +53,7 @@
 .login-popup .inputs .password {
     position: relative;
 }
+
 .login-popup .inputs .eye {
     position: absolute;
     top: 0;
@@ -103,9 +104,9 @@
 }
 
 .login-popup .inputs .name input:focus + label,
-.login-popup .inputs .name input.name-valid + label,
+.login-popup .inputs .name input[value]:not([value=""]) + label,
 .login-popup .inputs .password input:focus + label,
-.login-popup .inputs .password input.password-valid + label {
+.login-popup .inputs .password input[value]:not([value=""]) + label {
     top: -2px;
     font-size: 14px;
     color: var(--color);

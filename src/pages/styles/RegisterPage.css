@@ -1,3 +1,67 @@
 .register-page {
     padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.register-page .form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 18px;
+}
+
+.register-page .form input {
+    padding: 4px 8px;
+    border: 2px solid var(--emph-not-active);
+    color: var(--color);
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+
+    width: 26ch;
+}
+
+.register-page .form div {
+    position: relative;
+}
+
+.register-page .form label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--emph-not-active);
+    pointer-events: none;
+    -webkit-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+}
+
+.register-page .form input:focus + label,
+.register-page .form input[value]:not([value=""]) + label {
+    top: -2px;
+    font-size: 14px;
+    color: var(--color);
+    background-color: var(--background);
+}
+
+.register-page .form input:focus {
+    outline: none;
+    border: 2px solid var(--color);
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--background) inset !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--color) !important;
 }

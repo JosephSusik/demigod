@@ -14,7 +14,7 @@ import LoginPopup from './LoginPopup';
 
 function Navbar() {
     const [popup, setPopup] = useState(false)
-    
+
     return(
         <nav>
             <div className='logo'>

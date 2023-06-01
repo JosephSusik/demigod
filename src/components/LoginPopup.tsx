@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 
+
+
 function LoginPopup() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -65,7 +67,7 @@ function LoginPopup() {
             </div>
             <div className='register'>
                 <p>Nemáte účet?</p>
-                <NavLink to={'/register'}>Zaregistrujte se </NavLink>
+                <NavLink to={'/register'}>Zaregistrujte se</NavLink>
             </div>
         </div>
     );
