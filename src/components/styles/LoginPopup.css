@@ -67,22 +67,12 @@
     font-size: 18px;
 }
 
-.login-popup .inputs input.name-valid {
+.login-popup .inputs input[value]:not([value=""]) {
     border: 2px solid var(--color);
 }
-
-.login-popup .inputs input.name-not-valid {
+.login-popup .inputs input[value] {
     border: 2px solid var(--emph-not-active);
 }
-
-.login-popup .inputs input.password-valid {
-    border: 2px solid var(--color);
-}
-
-.login-popup .inputs input.password-not-valid {
-    border: 2px solid var(--emph-not-active);
-}
-
 
 .login-popup .inputs .name {
     position: relative;
@@ -132,12 +122,23 @@
 
 .login-popup .inputs button.not-valid {
     border: 2px solid var(--emph-not-active);
+    border: 2px solid var(--color);
 }
 
 .login-popup .inputs button.not-valid:hover {
     background-color: var(--background);
     color: var(--color);
     cursor:not-allowed;
+}
+
+.login-popup .inputs button.valid:focus {
+    outline: none;
+    background-color: var(--color);
+    color: var(--background);
+}
+
+.login-popup .inputs button.not-valid:focus {
+    outline: none;
 }
 
 .login-popup .inputs button.valid {

@@ -1,5 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './styles/RegisterPage.css'
+
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+
 
 function RegisterPage() {
     const [name, setName] = useState("");
@@ -7,7 +11,9 @@ function RegisterPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [passwordRepeat, setPasswordRepeat] = useState("");
-    
+    const [valid, setValid] = useState(false);
+    const [visible, setVisible] = useState(false);
+
     
     const handleName = (event:React.FormEvent<HTMLInputElement>) => {
         setName(event.currentTarget.value);
@@ -24,6 +30,14 @@ function RegisterPage() {
     const handlePasswordRepeat = (event:React.FormEvent<HTMLInputElement>) => {
         setPasswordRepeat(event.currentTarget.value);
     }
+
+    useEffect(() => {
+        name &&
+        surname &&
+        email &&
+        password &&
+        passwordRepeat? setValid(true) : setValid(false);
+    }, [surname, password, name, email, passwordRepeat]);
 
     return(
         <section className='register-page'>
@@ -54,12 +68,21 @@ function RegisterPage() {
                     <label htmlFor="email">Email</label>
                 </div>
                 <div>
-                    <input type="password" 
+                    <input type={visible? "text":"password"} 
                         id='password'
                         value={password}
                         onChange={handlePassword}
                     />
                     <label htmlFor="password">Heslo</label>
+                    <div className='eye'
+                        onClick={()=>setVisible(!visible)}
+                    >
+                        {visible?
+                            <VisibilityOutlinedIcon className='icon'/>
+                            :
+                            <VisibilityOffOutlinedIcon className='icon'/>
+                        }
+                    </div>
                 </div>
                 <div>
                     <input type="password" 
@@ -69,6 +92,7 @@ function RegisterPage() {
                     />
                     <label htmlFor="epeat-password">Heslo</label>
                 </div>
+                <button className={valid? "valid":"not-valid"}>Registrovat</button>
             </div>
         </section>
     );

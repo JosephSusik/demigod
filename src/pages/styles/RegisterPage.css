@@ -54,6 +54,14 @@
     border: 2px solid var(--color);
 }
 
+.register-page .form input[value]:not([value=""]) {
+    border: 2px solid var(--color);
+}
+
+.register-page .form input[value] {
+    border: 2px solid var(--emph-not-active);
+}
+
 /* Change the white to any color */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -64,4 +72,63 @@ input:-webkit-autofill:active{
 /*Change text in autofill textbox*/
 input:-webkit-autofill{
     -webkit-text-fill-color: var(--color) !important;
+}
+
+
+.register-page .form button {
+    padding: 4px 8px;
+    border: 2px solid var(--color);
+    color: var(--color);
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+
+    transition: all .2s linear;
+}
+
+.register-page .form button.valid:focus {
+    outline: none;
+    background-color: var(--color);
+    color: var(--background);
+}
+
+.register-page .form button.not-valid:focus {
+    outline: none;
+}
+
+.register-page .form button:hover {
+    cursor: pointer;
+
+    background-color: var(--color);
+    color: var(--background);
+}
+
+.register-page .form button.not-valid {
+    border: 2px solid var(--emph-not-active);
+    border: 2px solid var(--color);
+}
+
+.register-page .form button.not-valid:hover {
+    background-color: var(--background);
+    color: var(--color);
+    cursor:not-allowed;
+}
+
+.register-page .form button.valid {
+    border: 2px solid var(--color);
+}
+
+.register-page .form .eye {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 6px;
+    height: 18px;
+}
+
+.register-page .form .eye .icon { 
+    font-size: 18px;
+}
+.register-page .form .eye:hover {
+    cursor: pointer;
 }
