@@ -52,7 +52,7 @@ body:has(.item-show-item:hover)
 }
 
 .item-show-item .text p {
-    
+    font-family: 'Cinzel', 'Roboto', serif;
 }
 
 .item-show-item a {

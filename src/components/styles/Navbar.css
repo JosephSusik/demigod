@@ -102,12 +102,10 @@ nav .icon-wrapper {
     position: absolute;
 
     width: 128px;
+    width: 192px;
+    width: auto;
 
     padding: 16px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
 
     left: 50%;
     transform: translate(-50%, 0);
@@ -116,4 +114,6 @@ nav .icon-wrapper {
     background: var(--background);
     border: 2px solid var(--color);
     border-radius: var(--border-radius);
+
+    z-index: 1000;
 }

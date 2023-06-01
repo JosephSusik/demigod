@@ -9,6 +9,7 @@ import ClickAwayListener from 'react-click-away-listener';
 
 import img from '../img/demigod-icon.png'
 import { useState } from 'react';
+import LoginPopup from './LoginPopup';
 
 
 function Navbar() {
@@ -31,12 +32,7 @@ function Navbar() {
                     {popup && (
                         <ClickAwayListener onClickAway={() => setPopup(false)}>
                                 <div className={'popup'}>
-                                    <p>Login</p>
-                                    <input type="text" name="" id="" placeholder='Login name' />
-                                    <input type="password" name="" id="" placeholder='Password'/>
-                                    <button>Přihlásit se</button>
-                                    <p>Nemáte účet?</p>
-                                    <p>Zaregistrujte se</p>
+                                    <LoginPopup />
                                 </div>
                         </ClickAwayListener>
                     )}

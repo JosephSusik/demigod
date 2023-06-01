@@ -1,0 +1,180 @@
+.login-popup {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-popup .login {
+    align-self: center;
+}
+
+.login-popup a {
+    all: unset;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    width: max-content;
+}
+
+.login-popup a::after {
+    all: unset;
+}
+
+.login-popup a:hover {
+    cursor: pointer;
+}
+
+.login-popup .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 18px;
+}
+
+.login-popup .register {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-size: 14px;
+}
+
+.login-popup .inputs input {
+    padding: 4px 8px;
+    border: 2px solid var(--emph-not-active);
+    color: var(--color);
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+
+    width: 26ch;
+}
+
+.login-popup .inputs .password {
+    position: relative;
+}
+.login-popup .inputs .eye {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 6px;
+    height: 18px;
+}
+
+.login-popup .inputs .eye .icon{ 
+    font-size: 18px;
+}
+
+.login-popup .inputs input.name-valid {
+    border: 2px solid var(--color);
+}
+
+.login-popup .inputs input.name-not-valid {
+    border: 2px solid var(--emph-not-active);
+}
+
+.login-popup .inputs input.password-valid {
+    border: 2px solid var(--color);
+}
+
+.login-popup .inputs input.password-not-valid {
+    border: 2px solid var(--emph-not-active);
+}
+
+
+.login-popup .inputs .name {
+    position: relative;
+}
+
+.login-popup .inputs .name label,
+.login-popup .inputs .password label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--emph-not-active);
+    pointer-events: none;
+    -webkit-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+}
+
+.login-popup .inputs .name input:focus + label,
+.login-popup .inputs .name input.name-valid + label,
+.login-popup .inputs .password input:focus + label,
+.login-popup .inputs .password input.password-valid + label {
+    top: -2px;
+    font-size: 14px;
+    color: var(--color);
+    background-color: var(--background);
+}
+
+.login-popup .inputs button {
+    padding: 4px 8px;
+    border: 2px solid var(--color);
+    color: var(--color);
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+
+    transition: all .2s linear;
+}
+
+.login-popup .inputs button:hover {
+    cursor: pointer;
+
+    background-color: var(--color);
+    color: var(--background);
+}
+
+.login-popup .inputs button.not-valid {
+    border: 2px solid var(--emph-not-active);
+}
+
+.login-popup .inputs button.not-valid:hover {
+    background-color: var(--background);
+    color: var(--color);
+    cursor:not-allowed;
+}
+
+.login-popup .inputs button.valid {
+    border: 2px solid var(--color);
+}
+
+.login-popup .inputs input:focus {
+    outline: none;
+    border: 2px solid var(--color);
+}
+
+.login-popup .inputs input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--emph-not-active);
+    opacity: 1; /* Firefox */
+}
+  
+.login-popup .inputs input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--emph-not-active);
+}
+  
+.login-popup .inputs input::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--emph-not-active);
+}
+
+/*
+.login-popup .inputs input:not([value='']) {
+    border: 2px solid var(--color);
+}
+*/
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--background) inset !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--color) !important;
+}
