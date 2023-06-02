@@ -54,7 +54,8 @@ body {
     --div-backround: var(--black-200);
 
     --emph: red;
-    --emph-not-active: lime;
+    --emph-not-active: #797979;
+
 
     --filter: invert(100%);
 }

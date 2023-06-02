@@ -1,26 +1,52 @@
 import './styles/CartPopup.css'
 
 import img from '../img/demigod-triko.jpeg'
-
+import CloseIcon from '@mui/icons-material/Close';
+import { NavLink } from 'react-router-dom';
 
 function CartPopup() {
     return(
         <div className="cart-popup">
+            
             <div className='cart-item'>
                 <img src={img} alt="" />
                 <div className='info'>
                     <p className='name'>Manipulate - Tričko</p>
-                    <div>
-                        <p className='detail'>Barva: Béžová
-                        <p className='detail'>Velikost: M</p></p>
-                    </div>
+                    <p className='detail'>Barva: Béžová</p>
+                    <p className='detail'>Velikost: M</p>
                     <p className='price'>549 Kč</p>
                 </div>
                 <div className='remove'>
-                    x
+                    <CloseIcon className='icon'/>
                 </div>
             </div>
-            <button>Přejít do košíku</button>
+
+            <div className='cart-item'>
+                <img src={img} alt="" />
+                <div className='info'>
+                    <p className='name'>Manipulate - Tričko s Dlouhým názvem</p>
+                    <p className='detail'>Barva: Béžová</p>
+                    <p className='detail'>Velikost: M</p>
+                    <p className='price'>549 Kč</p>
+                </div>
+                <div className='remove'>
+                    <CloseIcon className='icon'/>
+                </div>
+            </div>
+            <div className='cart-item'>
+                <img src={img} alt="" />
+                <div className='info'>
+                    <p className='name'>Manipulat</p>
+                    <p className='detail'>Barva: Béžovááááá</p>
+                    <p className='detail'>Velikost: M</p>
+                    <p className='price'>100000000 Kč</p>
+                </div>
+                <div className='remove'>
+                    <CloseIcon className='icon'/>
+                </div>
+            </div>
+
+            <NavLink to={'/cart'}><button>Přejít do košíku</button></NavLink>
         </div>
     );
 }

@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 24ch;
-    width: 256px;
+    --width: 24ch;
+    min-width: 256px;
 }
 
 .cart-popup .cart-item {
@@ -11,22 +11,52 @@
     border: 2px solid var(--color);
     border-radius: var(--border-radius);
     display: grid;
-    grid-template-columns: 1fr 3fr .3fr;
+    grid-template-columns: min-content auto 20px;
     gap: 8px;
-    cursor: pointer;
+    overflow: hidden;
+
+    height: 100px;
 }
+
 .cart-popup .cart-item img {
-    width: 100%;
-    height: 100%;
+    width: min-content;
+    height: 100px;
     object-fit: cover;
+    object-position: center;
+    border-right: 1px solid var(--color);
 }
 
 .cart-popup .cart-item .info {
-    width: auto;
+    width: 100%;
     display: flex;
+    white-space: nowrap;
     flex-direction: column;
 
-    justify-content: space-around;
+    padding: 8px 0px;
+    padding-right: 8px;
+    justify-content: space-between;
+}
+
+.cart-popup .cart-item .info .name {
+    width: max-content;
+}
+
+.cart-popup .cart-item .info .name:hover {
+    cursor: pointer;
+}
+
+.cart-popup .cart-item .info .name::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 0px;
+    width: 0px;
+    border-bottom: 1px solid var(--color);
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.cart-popup .cart-item .info .name:hover::after {
+    width: 100%;
 }
 
 .cart-popup .cart-item .info .name,
@@ -41,8 +71,20 @@
 
 .cart-popup .cart-item .remove {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.cart-popup .cart-item .remove .icon {
+    font-size: medium;
+    transition: all .2s linear;
+    border-radius: var(--border-radius);
+}
+
+.cart-popup .cart-item .remove .icon:hover {
+    font-size: medium;
+    color: var(--background);
+    background: var(--color);
 }
 
 .cart-popup button {
@@ -67,4 +109,11 @@
     outline: none;
     background-color: var(--color);
     color: var(--background);
+}
+
+.cart-popup a {
+    all: unset;
+}
+.cart-popup a::after {
+    all: unset;
 }
