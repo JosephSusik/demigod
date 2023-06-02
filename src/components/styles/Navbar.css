@@ -48,7 +48,6 @@ nav a.active::after {
     width: 100%;
 }
 
-
 nav .cart-btn {
     width: max-content;
 
@@ -95,7 +94,7 @@ nav .icon {
 nav .icon-wrapper {
     width: min-content;
     height: 24px;
-    position: relative;
+    cursor: pointer;
 }
 
 .popup {
@@ -107,13 +106,36 @@ nav .icon-wrapper {
 
     padding: 16px;
 
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 34px;
+    right: 10vw;
+    top: calc(var(--nav-height) - 4px);
 
     background: var(--background);
     border: 2px solid var(--color);
     border-radius: var(--border-radius);
 
     z-index: 1000;
+    cursor: default;
+
+}
+
+.popup2 {
+    position: absolute;
+
+    width: 128px;
+    width: 192px;
+    width: auto;
+
+    min-width: 24ch;
+
+    padding: 16px;
+
+    right: 10vw;
+    top: calc(var(--nav-height) - 4px);
+
+    background: var(--background);
+    border: 2px solid var(--color);
+    border-radius: var(--border-radius);
+
+    z-index: 1000;
+    cursor: default;
 }

@@ -10,10 +10,14 @@ import ClickAwayListener from 'react-click-away-listener';
 import img from '../img/demigod-icon.png'
 import { useState } from 'react';
 import LoginPopup from './LoginPopup';
+import CartPopup from './CartPopup';
 
 
 function Navbar() {
     const [popup, setPopup] = useState(false)
+    const [popupCart, setPopupCart] = useState(false)
+
+    let itemsCart = 3;
 
     return(
         <nav>
@@ -37,9 +41,22 @@ function Navbar() {
                         </ClickAwayListener>
                     )}
                 </div>
-                <Badge badgeContent={1} overlap="rectangular">
-                    <ShoppingCartOutlinedIcon className='icon'/>{" "}
-                </Badge>
+                <div className='icon-wrapper' onClick={()=>setPopupCart(true)}>
+                    <Badge badgeContent={itemsCart} overlap="rectangular">
+                        <ShoppingCartOutlinedIcon className='icon'/>{" "}
+                    </Badge>
+                    {popupCart && (
+                        <ClickAwayListener onClickAway={() => setPopupCart(false)}>
+                                <div className={'popup2'}>
+                                    {itemsCart === 0?
+                                        <p>cart is empty</p>
+                                    :
+                                        <CartPopup />
+                                    }
+                                </div>
+                        </ClickAwayListener>
+                    )}
+                </div>
             </div>
         </nav>
     );

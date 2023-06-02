@@ -10,7 +10,6 @@ function Filters() {
     const [cheap, setCheap] = useState(false);
     const [allPrice, setAllprice] = useState(true);
 
-
     const addActive = (item:string) => {
         if(item === "tshirts") {
             setTshirts(true);
