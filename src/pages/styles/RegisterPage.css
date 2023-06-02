@@ -49,17 +49,17 @@
     background-color: var(--background);
 }
 
-.register-page .form input:focus {
-    outline: none;
-    border: 2px solid var(--color);
-}
-
 .register-page .form input[value]:not([value=""]) {
     border: 2px solid var(--color);
 }
 
 .register-page .form input[value] {
     border: 2px solid var(--emph-not-active);
+}
+
+.register-page .form input:focus {
+    outline: none;
+    border: 2px solid var(--color);
 }
 
 /* Change the white to any color */
