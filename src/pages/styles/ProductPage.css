@@ -1,0 +1,37 @@
+.product-page {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.product-page .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.product-page .top .images {
+    /*Make it center of page*/
+    max-height: calc(100vh - var(--nav-height) - 32px);
+}
+
+.product-page .top .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-page .top .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-page .top .info .name {
+    font-size: 48px;
+}
+
+.product-page .bottom {
+    height: 100px;
+}
