@@ -105,9 +105,14 @@
 
 .login-popup .inputs button {
     padding: 4px 8px;
+        
     border: 2px solid var(--color);
     color: var(--color);
+
+    color: var(--background);
+
     background-color: var(--background);
+    background-color: var(--color);
     border-radius: var(--border-radius);
 
     transition: all .2s linear;
@@ -135,6 +140,12 @@
     outline: none;
     background-color: var(--color);
     color: var(--background);
+}
+
+.login-popup .inputs button.valid:hover {
+    outline: none;
+    background-color: var(--background);
+    color: var(--color);
 }
 
 .login-popup .inputs button.not-valid:focus {

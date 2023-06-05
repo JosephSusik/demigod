@@ -79,7 +79,9 @@ input:-webkit-autofill{
     padding: 4px 8px;
     border: 2px solid var(--color);
     color: var(--color);
+    color: var(--background);
     background-color: var(--background);
+    background-color: var(--color);
     border-radius: var(--border-radius);
 
     transition: all .2s linear;
@@ -89,6 +91,9 @@ input:-webkit-autofill{
     outline: none;
     background-color: var(--color);
     color: var(--background);
+
+    background-color: var(--background);
+    color: var(--color);
 }
 
 .register-page .form button.not-valid:focus {
@@ -115,6 +120,11 @@ input:-webkit-autofill{
 
 .register-page .form button.valid {
     border: 2px solid var(--color);
+}
+
+.register-page .form button.valid:hover {
+    background-color: var(--background);
+    color: var(--color);
 }
 
 .register-page .form .eye {

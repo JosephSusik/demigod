@@ -2,16 +2,18 @@
     width: 272px;
 
     width: 360px;
-
+/*
     border: 2px solid var(--color);
+*/
     border-radius: var(--border-radius);
 
     overflow: hidden;
 
     display: flex;
     flex-direction: column;
+/*    
     gap: 4px;
-
+*/
     background: var(--emph);
 
     transition: all .2s ease-in-out;
@@ -27,6 +29,11 @@
     gap: 8px;
 
     padding-bottom: 4px;
+    padding-top: 8px;
+
+    border-right: 2px solid var(--color);
+    border-left: 2px solid var(--color);
+    border-bottom: 2px solid var(--color);
 }
 
 .product-preview .item-name {

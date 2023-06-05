@@ -24,7 +24,7 @@ function CartPopup() {
             <div className='cart-item'>
                 <img src={img} alt="" />
                 <div className='info'>
-                    <p className='name'>Manipulate - Tričko s Dlouhým názvem</p>
+                    <p className='name'>Manipulate - Tričko</p>
                     <p className='detail'>Barva: Béžová</p>
                     <p className='detail'>Velikost: M</p>
                     <p className='price'>549 Kč</p>
@@ -33,20 +33,8 @@ function CartPopup() {
                     <CloseIcon className='icon'/>
                 </div>
             </div>
-            <div className='cart-item'>
-                <img src={img} alt="" />
-                <div className='info'>
-                    <p className='name'>Manipulat</p>
-                    <p className='detail'>Barva: Béžovááááá</p>
-                    <p className='detail'>Velikost: M</p>
-                    <p className='price'>100000000 Kč</p>
-                </div>
-                <div className='remove'>
-                    <CloseIcon className='icon'/>
-                </div>
-            </div>
 
-            <NavLink to={'/cart'}><button>Přejít do košíku</button></NavLink>
+            <NavLink to={'/cart'}><button>Pokračovat do košíku</button></NavLink>
         </div>
     );
 }

@@ -8,7 +8,9 @@
 
 .cart-popup .cart-item {
     width: auto;
+    /*
     border: 2px solid var(--color);
+    */
     border-radius: var(--border-radius);
     display: grid;
     grid-template-columns: min-content auto 20px;
@@ -16,6 +18,10 @@
     overflow: hidden;
 
     height: 100px;
+
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid var(--color);
 }
 
 .cart-popup .cart-item img {
@@ -23,7 +29,7 @@
     height: 100px;
     object-fit: cover;
     object-position: center;
-    border-right: 1px solid var(--color);
+    border-radius: var(--border-radius);
 }
 
 .cart-popup .cart-item .info {
@@ -89,10 +95,16 @@
 
 .cart-popup button {
     width: 100%;
+/*    
     padding: 4px 8px;
+*/    
+    padding: 6px 10px;
+    
     border: 2px solid var(--color);
     color: var(--color);
+    color: var(--background);
     background-color: var(--background);
+    background-color: var(--color);
     border-radius: var(--border-radius);
 
     transition: all .2s linear;
@@ -102,13 +114,18 @@
     cursor: pointer;
 
     background-color: var(--color);
+    background-color: var(--background);
     color: var(--background);
+    color: var(--color);
 }
 
-.cart-popup button.valid:focus {
+.cart-popup button:focus {
     outline: none;
     background-color: var(--color);
     color: var(--background);
+
+    background-color: var(--background);
+    color: var(--color);
 }
 
 .cart-popup a {
