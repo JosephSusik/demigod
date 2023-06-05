@@ -10,6 +10,28 @@ nav {
     place-items: center;
 
     background: var(--background);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 105;
+
+}
+
+nav::after {
+    border-bottom: 2px solid var(--color);
+    position: absolute;
+    left: 50%;
+    content: ' ';
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+    width: 0;
+    height: 0;
+    bottom: 0;
+}
+  
+.sticky-nav::after {
+    width: 100%;
 }
 
 nav ul {
@@ -107,7 +129,7 @@ nav .icon-wrapper {
     padding: 16px;
 
     right: 10vw;
-    top: calc(var(--nav-height) - 4px);
+    top: calc(var(--nav-height) - 12px);
 
     background: var(--background);
     border: 2px solid var(--color);
@@ -130,7 +152,7 @@ nav .icon-wrapper {
     padding: 16px;
 
     right: 10vw;
-    top: calc(var(--nav-height) - 4px);
+    top: calc(var(--nav-height) - 12px);
 
     background: var(--background);
     border: 2px solid var(--color);

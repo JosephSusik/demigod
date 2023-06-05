@@ -8,7 +8,7 @@ import DarkModeSwitch from './DarkModeSwitch';
 import ClickAwayListener from 'react-click-away-listener';
 
 import img from '../img/demigod-icon.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LoginPopup from './LoginPopup';
 import CartPopup from './CartPopup';
 
@@ -17,10 +17,25 @@ function Navbar() {
     const [popup, setPopup] = useState(false)
     const [popupCart, setPopupCart] = useState(false)
 
+    const [sticky, setSticky] = useState('');
+
+    useEffect(() => {
+        window.addEventListener('scroll', stickyNav);
+        return () => window.removeEventListener('scroll', stickyNav);
+    })
+
+    const stickyNav = () => {
+        if (window !== undefined) {
+            let windowHeight = window.scrollY;
+            windowHeight > 1 ? setSticky('sticky-nav') : setSticky('');
+        }
+    }
+
+
     let itemsCart = 3;
 
     return(
-        <nav>
+        <nav className={sticky}>
             <div className='logo'>
                 <NavLink to={"/"}><img src={img} alt="" /></NavLink>
             </div>
