@@ -54,6 +54,8 @@
 .product-page .top .info .drp-dwn .colors button.active {
     background: var(--color);
     color: var(--background);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .product-page .top .info .drp-dwn p {
@@ -79,6 +81,8 @@
     width: 50%;
     border: 2px solid var(--color);
     border-radius: var(--border-radius);
+    background: var(--color);
+    color: var(--background);
 }
 
 .product-page .top .info button:hover {

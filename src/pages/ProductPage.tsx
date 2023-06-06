@@ -9,6 +9,7 @@ function ProductPage() {
     //Product id
     let { id } = useParams();
     const [numberOfItems, setNumberOfItems] = useState(1);
+    const [isBlack, setIsBlack] = useState(true)
 
     const optionsSize = [
         { value: "s", label: "S" },
@@ -42,8 +43,12 @@ function ProductPage() {
                     <div className='drp-dwn'>
                         <p>Barva:</p>
                         <div className='colors'>
-                            <button className='active'>Černá</button>
-                            <button>Bílá</button>
+                            <button className={isBlack? "active":""}
+                                onClick={()=>setIsBlack(true)}
+                                >Černá</button>
+                            <button className={isBlack? "":"active"}
+                                onClick={()=>setIsBlack(false)}
+                                >Bílá</button>
                         </div>
                     </div>
                     <div className='drp-dwn'>
@@ -63,7 +68,7 @@ function ProductPage() {
                             className='inc'
                         >+</p>
                     </div>
-                    <button>Přidat do košíku</button>
+                    <button className='cart-btn'>Přidat do košíku</button>
 
 
                 </div>
