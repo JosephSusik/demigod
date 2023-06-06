@@ -10,11 +10,6 @@ function ProductPage() {
     let { id } = useParams();
     const [numberOfItems, setNumberOfItems] = useState(1);
 
-    const optionsColor = [
-        { value: "black", label: "Černá" },
-        { value: "white", label: "Bílá" },
-    ];
-
     const optionsSize = [
         { value: "s", label: "S" },
         { value: "m", label: "M" },
@@ -46,7 +41,10 @@ function ProductPage() {
                     <p>Model měří 173 cm a váží 93 kg.</p>
                     <div className='drp-dwn'>
                         <p>Barva:</p>
-                        <DropDown placeHolder="Zvolte variantu" options={optionsColor}/>
+                        <div className='colors'>
+                            <button className='active'>Černá</button>
+                            <button>Bílá</button>
+                        </div>
                     </div>
                     <div className='drp-dwn'>
                         <p>Velikost:</p>

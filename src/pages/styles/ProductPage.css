@@ -9,7 +9,7 @@
 .product-page .top {
     display: grid;
     grid-template-columns: max-content auto;
-    gap: 16px;
+    gap: 32px;
 }
 
 .product-page .top .images {
@@ -36,6 +36,24 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.product-page .top .info .drp-dwn .colors {
+    display: flex;
+    gap: 8px;
+    width: 50%;
+}
+
+
+.product-page .top .info .drp-dwn .colors button {
+    border: 2px solid var(--color);
+    background: var(--background);
+    color: var(--color);
+}
+
+.product-page .top .info .drp-dwn .colors button.active {
+    background: var(--color);
+    color: var(--background);
 }
 
 .product-page .top .info .drp-dwn p {
