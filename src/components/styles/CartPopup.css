@@ -123,6 +123,7 @@
 
     background-color: var(--color);
     background-color: var(--background);
+    background-color: var(--emph);
     color: var(--background);
     color: var(--color);
 }
@@ -130,9 +131,9 @@
 .cart-popup button:focus {
     outline: none;
     background-color: var(--color);
+    background-color: var(--emph);
     color: var(--background);
 
-    background-color: var(--background);
     color: var(--color);
 }
 

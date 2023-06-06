@@ -131,7 +131,7 @@ nav .icon-wrapper {
     right: 10vw;
     top: calc(var(--nav-height) - 12px);
 
-    background: var(--background);
+    background: var(--emph);
     border: 2px solid var(--color);
     border-radius: var(--border-radius);
 
@@ -154,7 +154,7 @@ nav .icon-wrapper {
     right: 10vw;
     top: calc(var(--nav-height) - 12px);
 
-    background: var(--background);
+    background: var(--emph);
     border: 2px solid var(--color);
     border-radius: var(--border-radius);
 

@@ -132,6 +132,7 @@
 
 .login-popup .inputs button.not-valid:hover {
     background-color: var(--background);
+    background-color: var(--emph);
     color: var(--color);
     cursor:not-allowed;
 }
@@ -139,12 +140,14 @@
 .login-popup .inputs button.valid:focus {
     outline: none;
     background-color: var(--color);
-    color: var(--background);
+    background-color: var(--emph);
+    color: var(--color);
 }
 
 .login-popup .inputs button.valid:hover {
     outline: none;
     background-color: var(--background);
+    background-color: var(--emph);
     color: var(--color);
 }
 
