@@ -3,17 +3,32 @@ import './styles/ProductPage.css'
 
 import img from '../img/demigod-triko.jpeg'
 import DropDown from '../components/DropDown';
+import { useState } from 'react';
 
 function ProductPage() {
     //Product id
     let { id } = useParams();
+    const [numberOfItems, setNumberOfItems] = useState(1);
 
-    const options = [
-        { value: "green", label: "Green" },
-        { value: "blue", label: "Blue" },
-        { value: "red", label: "Red" },
-        { value: "grey", label: "Grey" }
-      ];
+    const optionsColor = [
+        { value: "black", label: "Černá" },
+        { value: "white", label: "Bílá" },
+    ];
+
+    const optionsSize = [
+        { value: "s", label: "S" },
+        { value: "m", label: "M" },
+        { value: "l", label: "L" },
+        { value: "xl", label: "XL" },
+    ];
+
+    const decNumber = () => {
+        numberOfItems <= 1? setNumberOfItems(1) : setNumberOfItems(numberOfItems-1);
+    }
+
+    const incNumber = () => {
+        setNumberOfItems(numberOfItems+1);
+    }
     
     
     return(
@@ -21,25 +36,36 @@ function ProductPage() {
             <div className='top'>
                 <div className='images'>
                     <img src={img} alt="" />
+                    <p>carousel</p>
                 </div>
                 <div className='info'>
-                    <p className='name'>NAME</p>
-                    <p>Popis</p>
-                    <p>Podivej se na sizing table</p>
-                    <p>Jaká velikost je na fotkach</p>
-                    <p>Jak moc thicc je model</p>
+                    <p className='name'>Demigod - Mikina</p>
+                    <p>Mikina s kapucí a klokaní kapsou, ve které se budeš u každé příležitosti cítit maximálně pohodlně.</p>
+                    <p>Aby ti mikina co nejlépe seděla, před vybráním velikosti si překontroluj tabulku velikostí (najdeš ji níže v detailním popisku produktu)</p>
+                    <p>Na fotkách je černá i bílá mikina velikosti XL</p>
+                    <p>Model měří 173 cm a váží 93 kg.</p>
+                    <div className='drp-dwn'>
+                        <p>Barva:</p>
+                        <DropDown placeHolder="Zvolte variantu" options={optionsColor}/>
+                    </div>
+                    <div className='drp-dwn'>
+                        <p>Velikost:</p>
+                        <DropDown placeHolder="Zvolte variantu" options={optionsSize}/>
+                    </div>
+                    
 
-                    <p>BARVA</p>
-                    <DropDown placeHolder="ZVOL NECO" options={options}/>
-                    <p>VELIKOST</p>
-                    <DropDown placeHolder="ZVOL NECO2" options={options}/>
+                    <p className='price'>1 149 Kč</p>
 
-                    <p>CENA</p>
-
-                    <p>someother shit</p>
-
-                    <p>NUMERB OF ITEMS</p>
-                    <p>ADD TO CART</p>
+                    <div className='number-of-items'>
+                        <p onClick={decNumber}
+                            className='dec'
+                        >-</p>
+                        <p className='number'>{numberOfItems}</p>
+                        <p onClick={incNumber}
+                            className='inc'
+                        >+</p>
+                    </div>
+                    <button>Přidat do košíku</button>
 
 
                 </div>

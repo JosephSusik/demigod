@@ -30,7 +30,7 @@ function DropDown ({placeHolder, options}:{placeHolder:any, options:any}) {
     if (!selectedValue || selectedValue.length === 0) {
       return placeHolder;
     }
-    
+
     return selectedValue.label;
   };
 
@@ -52,7 +52,7 @@ function DropDown ({placeHolder, options}:{placeHolder:any, options:any}) {
   return (
     <div className="dropdown-container">
       <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
-        <div className="dropdown-selected-value">{getDisplay()}</div>
+        <div className={`dropdown-selected-value ${getDisplay() === placeHolder? "placeholder":""}`}>{getDisplay()}</div>
         <div className="dropdown-tools">
           <div className="dropdown-tool">
             <KeyboardArrowLeftIcon className={`icon ${showMenu? "rotate":""}`}/>
