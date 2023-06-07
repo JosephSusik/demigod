@@ -45,7 +45,6 @@ function ProductPage() {
                         <div className='colors'>
                         <button className={isBlack?'active':''} 
                             onClick={()=>setIsBlack(true)}>Černá</button>
-                        <p>|</p>
                         <button className={isBlack?'':'active'} 
                             onClick={()=>setIsBlack(false)}>Bílá</button>
                         </div>
