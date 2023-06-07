@@ -43,12 +43,11 @@ function ProductPage() {
                     <div className='drp-dwn'>
                         <p>Barva:</p>
                         <div className='colors'>
-                            <button className={isBlack? "active":""}
-                                onClick={()=>setIsBlack(true)}
-                                >Černá</button>
-                            <button className={isBlack? "":"active"}
-                                onClick={()=>setIsBlack(false)}
-                                >Bílá</button>
+                        <button className={isBlack?'active':''} 
+                            onClick={()=>setIsBlack(true)}>Černá</button>
+                        <p>|</p>
+                        <button className={isBlack?'':'active'} 
+                            onClick={()=>setIsBlack(false)}>Bílá</button>
                         </div>
                     </div>
                     <div className='drp-dwn'>
