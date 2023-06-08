@@ -61,7 +61,6 @@ function CartPopup() {
             </div>
 
             <NavLink to={'/cart'}><button>Pokračovat do košíku</button></NavLink>
-
         </div>
     );
 }

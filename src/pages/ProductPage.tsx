@@ -68,7 +68,7 @@ function ProductPage() {
                     </div>
                     <button className='cart-btn'>Přidat do košíku</button>
 
-
+                    <button className='sizing'>Tabulka velikostí</button>
                 </div>
             </div>
             <div className='bottom'>

@@ -3,6 +3,10 @@
     position: relative;
 
     width: 50%;
+    width: 25%;
+    width: calc(25% - 8px);
+
+    min-width: 170px;
 
     cursor: pointer;
 
@@ -74,7 +78,11 @@
 }
   
 .dropdown-item:hover {
+    
     background-color: red;
+
+    background-color: var(--color);
+    color: var(--background);
 }
   
 .dropdown-item.selected {

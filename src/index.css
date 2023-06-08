@@ -35,6 +35,10 @@ section {
   --padding-right: 16vw;
 */
 }
+::selection {
+  color: var(--background);
+  background: var(--color);
+}
 
 
 /* Hide scrollbar for Chrome, Safari and Opera */
